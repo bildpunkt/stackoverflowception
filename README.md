@@ -17,3 +17,5 @@ others to get rid of their problems!
 1. [Fork](https://github.com/pixeldesu/stackoverflowception/fork) this repository
 2. Add the Stack Overflow exception in your language and add it to a subfolder (e.g. `ruby`. `php`...)
 3. Open a [Pull Request](https://github.com/pixeldesu/stackoverflowception/compare)!
+
+**Note:** If due to library limitations or personal preference, you don't have to include code that it automatically links to the Stack Overflow search page, you can always just print out the link!
