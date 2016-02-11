@@ -7,7 +7,7 @@ Module StackOverflowception
             ' breaking code:
             File.OpenText("/DoesNotExist")
         Catch ex As Exception
-            Process.Start(String.Format("http://stackoverflow.com/search?q=%5Bc%23%5D%20{0}", Uri.EscapeUriString(ex.Message)))
+            Process.Start(String.Format("http://stackoverflow.com/search?q=%5Bvb%5D%20{0}", Uri.EscapeUriString(ex.Message)))
         End Try
     End Sub
 End Module
