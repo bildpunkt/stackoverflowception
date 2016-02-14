@@ -2,7 +2,7 @@ package stackoverflowceptionCheck
 
 import "github.com/pkg/browser"
 
-func stackoverflowceptionCheck(err error) bool {
+func StackoverflowceptionCheck(err error) bool {
 	if err != nil {
 		url := "http://stackoverflow.com/search?q="
 		url += err.Error()
