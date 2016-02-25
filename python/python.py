@@ -1,6 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import webbrowser
-from urllib.parse import quote
+import sys
+if sys.version_info[0] < 3:
+    from urllib import quote
+else:
+    from urllib.parse import quote
+
 
 try:
     print(aylamao) # add your breaking code here
