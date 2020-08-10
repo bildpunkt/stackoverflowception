@@ -1,4 +1,5 @@
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 public class StackOverflowExceptionExample {
   public static void main(String[] args) {
@@ -6,8 +7,13 @@ public class StackOverflowExceptionExample {
       // breaking code:
       int i = 5 / 0;
     } catch (Exception ex) {
-      throw new Error(String.format("Please visit http://stackoverflow.com/search?q=%%5Bjava%%5D%%20%s", URLEncoder.encode(ex.getMessage())));
+      String query = String.format("[java] \"%s\"", ex.getMessage());
+
+      // since Java 10
+      throw new Error("Please visit http://stackoverflow.com/search?q=" + URLEncoder.encode(query, StandardCharsets.UTF_8));
+
+      // before Java 10
+      // throw new Error("Please visit http://stackoverflow.com/search?q=" + URLEncoder.encode(query));
     }
   }
 }
-
